@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Example page's css -->
+    <link href="css/site.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="app" ng-controller="basicController">
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Tabbed fixed Table Column Headers example</h1>
+                <p>This is an example of header positioning bug in jquery.floatThead. When using bootstrop.ui tabs</p>
+                <p>To create the bug, please follow the steps bellow</p>
+                <ul>
+                    <li>Click Toggle fixed headers</li>
+                    <li>Scroll the Page so the Tabs are jut in view</li>
+                    <li>Switch to Second Tab</li>
+                    <li>Scroll the page up x amount</li>
+                    <li>Switch to First Tab</li>
+                    <li>Headers should jump out of table</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Example space to allow scrolling</h2>
+                <div class="spacer"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="controls">
+                    <button class="btn btn-default" ng-click="toggleFixedHeaders()"> Toggle Fixed Headers</button>
+                    <p><strong>Fixed Headers {{ state }}</strong></p>
+            </div>
+
+            <div class="col-lg-12 text-center tabs">
+				<uib-tabset active="active">
+					<uib-tab index="0" heading="First Tab">
+                        <div class="table-responsive">
+                            <table id="first-table" class="table table-bordered table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>First Table Column 1</th>
+                                        <th>First Table Column 2</th>
+                                        <th>First Table Column 3</th>
+                                        <th>First Table Column 4</th>
+                                        <th>First Table Column 5</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in firstTableData">
+                                        <td>{{ row.col1 }}</td>
+                                        <td>{{ row.col2 }}</td>
+                                        <td>{{ row.col3 }}</td>
+                                        <td>{{ row.col4 }}</td>
+                                        <td>{{ row.col5 }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+					</uib-tab>
+
+                    <uib-tab index="1" heading="Second Tab">
+                        <div class="table-responsive">
+                            <table id="second-table" class="table table-bordered table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Second Table Column 1</th>
+                                        <th>Second Table Column 2</th>
+                                        <th>Second Table Column 3</th>
+                                        <th>Second Table Column 4</th>
+                                        <th>Second Table Column 5</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in firstTableData">
+                                        <td>{{ row.col1 }}</td>
+                                        <td>{{ row.col2 }}</td>
+                                        <td>{{ row.col3 }}</td>
+                                        <td>{{ row.col4 }}</td>
+                                        <td>{{ row.col5 }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+				</uib-tabset>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Table outside of tab works perfect</h2>
+                <div class="table-responsive">
+                    <table id="third-table" class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Third Table Column 1</th>
+                                <th>Third Table Column 2</th>
+                                <th>Third Table Column 3</th>
+                                <th>Third Table Column 4</th>
+                                <th>Third Table Column 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="row in firstTableData">
+                                <td>{{ row.col1 }}</td>
+                                <td>{{ row.col2 }}</td>
+                                <td>{{ row.col3 }}</td>
+                                <td>{{ row.col4 }}</td>
+                                <td>{{ row.col5 }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 3.1.1 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+	
+	<!-- FloatTHead -->
+	<script src="js/jquery.floatThead.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+	
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/ui-bootstrap-2.2.0.min.js"></script>
+
+    <script src="js/ui-bootstrap-tpls.min.js"></script>
+	
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>
